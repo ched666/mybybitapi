@@ -1,4 +1,4 @@
-module github.com/Hongssd/mybybitapi
+module github.com/ched666/mybybitapi
 
 go 1.19
 
