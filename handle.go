@@ -34,6 +34,7 @@ func handlerCommonRest[T any](data []byte, code int) (*BybitRestRes[T], error) {
 		log.Errorf("rest err data: %s", string(data))
 		return nil, err
 	}
+	log.Debug("rest res data: %s", string(data))
 	return res, err
 }
 func (err *BybitErrorRes) handlerError() error {
