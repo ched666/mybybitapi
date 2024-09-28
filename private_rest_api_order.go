@@ -13,6 +13,7 @@ func (api *OrderCreateAPI) Do() (*BybitRestRes[OrderCreateRes], error) {
 	if err != nil {
 		return nil, err
 	}
+	log.Debugf("bybit order create req: %s", reqBody) //zsk修改
 	return bybitCallAPIWithSecret[OrderCreateRes](api.client.c, url, reqBody, POST)
 }
 

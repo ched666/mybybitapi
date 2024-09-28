@@ -291,7 +291,7 @@ func bybitCallAPIWithSecret[T any](client *Client, url url.URL, reqBody []byte, 
 	if err != nil {
 		return nil, err
 	}
-	log.Debug("res: ", string(body))
+	log.Debug("res: ", string(body)) //zsk修改
 	return res, res.handlerError()
 }
 
@@ -304,7 +304,7 @@ func bybitHandlerRequestAPIWithPathQueryParam[T any](apiType APIType, request *T
 		Path:     name,
 		RawQuery: query,
 	}
-	log.Debug("query: ", query)
+	log.Debug("query: ", query) //zsk修改
 	return u
 }
 
@@ -317,7 +317,7 @@ func bybitHandlerRequestAPIWithoutPathQueryParam(apiType APIType, name string) u
 		Path:     name,
 		RawQuery: "",
 	}
-	log.Debug("query: ", "")
+	log.Debug("query: ") //zsk修改
 	return u
 }
 
